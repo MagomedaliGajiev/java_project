@@ -1,0 +1,10 @@
+июн. 14, 2023 11:03:38 AM HW8 main
+INFO: Решение: 4 + 4 = 8
+июн. 14, 2023 11:03:43 AM HW8 main
+INFO: Решение: 3 - 1 = 2
+июн. 14, 2023 11:03:58 AM HW8 main
+INFO: Решение: 3 / 2 = 1
+июн. 14, 2023 11:04:16 AM HW8 main
+INFO: Решение: 3 * 3 = 9
+июн. 14, 2023 11:04:30 AM HW8 main
+INFO: Such operation is not included
