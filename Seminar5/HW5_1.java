@@ -61,6 +61,18 @@ public class HW5_1 {
         return newMap;
     }
 
+    public static void printDescendingMap(Map<String,ArrayList<String>> col){
+        Map<String, ArrayList<String>> temp = new HashMap<>();
+                temp = cloneMap(col);
+                while (!temp.isEmpty()) {
+                    ArrayList<String> list = temp.get(getMaxOfMap(temp));
+                    for (String item : list) {
+                        System.out.println(getMaxOfMap(temp) + " " + item);
+                    }
+                    temp.remove(getMaxOfMap(temp));
+                }
+    }
+
     public static void main(String[] args) {
 
         Map<String, ArrayList<String>> phoneBook = new HashMap<>();
@@ -78,8 +90,9 @@ public class HW5_1 {
                 System.out.print("Введите  номер телефона: ");
                 String phoneNumber = firstUpperCase(sc.nextLine());
                 if (!phoneBook.containsKey(surname)) {
-                    String[] strSplit = phoneNumber.split(" ");
-                    ArrayList<String> strList = new ArrayList<String>(Arrays.asList(strSplit));
+                    // String[] strSplit = phoneNumber.split("|||");
+                    ArrayList<String> strList = new ArrayList<String>();
+                    strList.add(phoneNumber);
                     phoneBook.put(surname, strList);
                     System.out.print("Введите желаемое действие: ");
                     enter = Integer.parseInt(sc.nextLine());
@@ -91,15 +104,7 @@ public class HW5_1 {
                     enter = Integer.parseInt(sc.nextLine());
                 }
             } else if (enter == 2) {
-                Map<String, ArrayList<String>> temp = new HashMap<>();
-                temp = cloneMap(phoneBook);
-                while (!temp.isEmpty()) {
-                    ArrayList<String> list = temp.get(getMaxOfMap(temp));
-                    for (String item : list) {
-                        System.out.println(getMaxOfMap(temp) + " " + item);
-                    }
-                    temp.remove(getMaxOfMap(temp));
-                }
+                printDescendingMap(phoneBook);
                 System.out.print("Введите желаемое действие: ");
                 enter = Integer.parseInt(sc.nextLine());
             } else {
