@@ -14,4 +14,24 @@ public class Cat {
             System.out.printf("%s уже привит\n", this.name);
         }
     }
+
+    public void petCat(int n){
+        if (this.sex) {
+            System.out.println("Fuck you bitch!");
+        }
+        else{
+            for (int i = 0; i < n; i++) {
+                System.out.println("meow");
+            }
+        }
+    }
+
+    public void killCat(){
+        if (this.age > 0) {
+            this.age = -1;
+            System.out.println(this.name + " убит!");
+        } else {
+            System.out.println();
+        }
+    }
 }
