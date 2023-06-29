@@ -1,15 +1,12 @@
+package Seminar6;
+
 /**
- * Реализовать класс Cat
- * Добавить в него поля:
- * Имя, возраст, Привит ли кот (boolean),дефолт - false, пол
- * 
- * Добавить методы:
- * Кот Имя мяукнул n раз
- * Привика кота, если был привит - сообщать об этом
- * Так же придумать 1-2 своих метода  
+ * Task6_2
  */
 public class Task6_2 {
 
-    Cat cat1 = new Cat();
-    cat1.name = "Barsik";
+    public static void main(String[] args) {
+        Cat cat1 = new Cat();
+        cat1.name = "Barsil";
+    }
 }
